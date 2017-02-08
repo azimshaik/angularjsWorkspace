@@ -7,7 +7,15 @@ export class Hero{
 
 @Component({
   selector: 'my-app',
-  template: `<h1>{{title}}</h1><h2>{{hero.name}} details!</h2>`,
+  template: `
+  			<h1>{{title}}</h1>
+  			<h2>{{hero.name}} details!</h2>
+  			<div><label>id: </label>{{hero.id}}</div>
+  			<div>
+  				<label>name: </label>
+  				<input value="{{hero.name}}" placeholder="name">
+  			</div>
+  			`
 })
 /**{{hero}} and {{title}} tells our app to read the title and hero properties from the component and render them---tthis so called "INTERPOLATION"*/
 
