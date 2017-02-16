@@ -19,12 +19,6 @@ export class HttpcallsComponent  {
         console.log(serviceurl);
         
     }
-    posts = [
-        new Posts(1,1,'this is post one title','this is post body'),
-        new Posts(2,2,'this is post one title','this is post body')
-    ];
-    myposts = this.posts[0];
-
 }
 
 // name = 'Angular'; 
