@@ -2,11 +2,12 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const passport  = require('passport-jwt');
+const passport  = require('passport');
 const mongoose = require('mongoose');
 const config = require('./config/database');
 
 //connect to database
+mongoose.Promise = global.Promise;
 mongoose.connect(config.database);
 
 //on connection
@@ -14,7 +15,7 @@ mongoose.connection.on('connected',() => {
     console.log('Connected to database'+config.database);
 });
 mongoose.connection.on('error',() => {
-    console.log('Database error'+err);
+    console.log('Database error'+err);   
 });
 const app = express();
 
